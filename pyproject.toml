@@ -5,7 +5,7 @@ description = ""
 authors = ["salman-mohamed-optisol <mohamed.salman@optisolbusiness.com>"]
 
 [tool.poetry.dependencies]
-python = "*"
+python = ">=3.10,<3.11"
 
 langchain = "0.3.13"
 langchain-openai = "0.2"
@@ -16,6 +16,7 @@ python-dotenv = "1.0.1"
 boto3 = "1.35.86"
 docx2txt = "0.8"
 azure-cognitiveservices-vision-computervision = "0.9.1"
+
 pypdf = "5.1.0"
 amazon-textract-caller = "0.2.4"
 amazon-textract-textractor = "1.8.5"
