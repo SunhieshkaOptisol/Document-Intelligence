@@ -34,6 +34,7 @@ pytest = "8.3.2"
 langchain-experimental = "0.3.4"
 psycopg2-binary = "^2.9.10"
 streamlit = "^1.34.0"
+langchain_aws = "^0.1.6"
 
 
 
