@@ -13,7 +13,7 @@ load_dotenv()
 
 # Import the backend processor for zip processing
 try:
-    from zipinvoice import create_processor, InvoiceProcessor
+    from invoice_processor import create_processor, InvoiceProcessor
     ZIP_PROCESSOR_AVAILABLE = True
 except ImportError:
     ZIP_PROCESSOR_AVAILABLE = False
