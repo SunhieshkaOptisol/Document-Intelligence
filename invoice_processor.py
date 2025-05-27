@@ -102,8 +102,7 @@ def process_single_file_worker(args):
                 record.update({
                     'item_description': 'N/A',
                     'qty': 'N/A',
-                    'unit_price': 'N/A',
-                    'item_total_amount': 'N/A'
+
                 })
                 processed_records.append(record)
             else:
@@ -113,8 +112,7 @@ def process_single_file_worker(args):
                         record.update({
                             'item_description': str(item.get('item_description', 'N/A')),
                             'qty': str(item.get('qty', 'N/A')),
-                            'unit_price': str(item.get('unit_price', 'N/A')),
-                            'item_total_amount': str(item.get('total_amount', 'N/A'))
+
                         })
                         processed_records.append(record)
             
@@ -133,8 +131,7 @@ def process_single_file_worker(args):
         # Return error record to ensure file is not missed
         fieldnames = [
             'source_file', 'invoice_number', 'invoice_date', 'customer_name',
-            'customer_address', 'item_description', 'qty', 'unit_price',
-            'item_total_amount', 'processing_error'
+            'customer_address', 'item_description', 'qty', 'processing_error'
         ]
         
         error_record = {
@@ -253,8 +250,6 @@ class InvoiceProcessor:
                 record.update({
                     'item_description': 'N/A',
                     'qty': 'N/A',
-                    'unit_price': 'N/A',
-                    'item_total_amount': 'N/A'
                 })
                 processed_records.append(record)
             else:
@@ -264,8 +259,6 @@ class InvoiceProcessor:
                         record.update({
                             'item_description': str(item.get('item_description', 'N/A')),
                             'qty': str(item.get('qty', 'N/A')),
-                            'unit_price': str(item.get('unit_price', 'N/A')),
-                            'item_total_amount': str(item.get('total_amount', 'N/A'))
                         })
                         processed_records.append(record)
             return processed_records
@@ -373,8 +366,6 @@ class InvoiceProcessor:
             'customer_address',
             'item_description',
             'qty',
-            'unit_price',
-            'item_total_amount',
             'processing_error'
         ]
 
